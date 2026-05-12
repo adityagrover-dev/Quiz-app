@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> JavaScript Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="app">
+
+    <div class="header">
+      <div class="logo">JS<span>.EXE</span></div>
+      <div class="tagline">// JavaScript Knowledge Test</div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+
+        <!-- START SCREEN -->
+        <div class="start-screen" id="startScreen">
+          <div class="start-title">// INITIALIZING QUIZ PROTOCOL...</div>
+          <div class="start-info">
+            <div class="info-item">
+              <span class="info-val">15</span>
+              <span class="info-lbl">Questions</span>
+            </div>
+            <div class="info-item">
+              <span class="info-val">20s</span>
+              <span class="info-lbl">Per Question</span>
+            </div>
+            <div class="info-item">
+              <span class="info-val">JS</span>
+              <span class="info-lbl">Topic</span>
+            </div>
+          </div>
+          <button class="start-btn" id="startBtn">[ EXECUTE ]</button>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div id="quizScreen" style="display:none">
+          <div class="progress-wrap">
+            <div class="progress-meta">
+              <span id="progressText">Q 1 / 15</span>
+              <span id="scoreText">SCORE: 0</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill" style="width:0%"></div>
+            </div>
+          </div>
+
+          <div class="timer-row">
+            <span class="timer-label">TIME</span>
+            <div class="timer-bar">
+              <div class="timer-fill" id="timerFill" style="width:100%"></div>
+            </div>
+            <span class="timer-count" id="timerCount">20</span>
+          </div>
+
+          <div class="question-num" id="questionNum">// Q_001</div>
+          <div class="question-text" id="questionText"></div>
+
+          <div class="options" id="optionsContainer"></div>
+
+          <div class="feedback" id="feedback"></div>
+          <button class="next-btn" id="nextBtn">[ NEXT_QUESTION → ]</button>
+        </div>
+
+        <!-- SCORE SCREEN -->
+        <div class="score-screen" id="scoreScreen">
+          <div class="score-title">// QUIZ COMPLETE — RESULTS:</div>
+          <div class="score-number" id="finalScore">0</div>
+          <div class="score-total" id="finalTotal">/ 15 correct</div>
+          <div class="score-grade" id="scoreGrade"></div>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-val" id="statCorrect">0</span>
+              <span class="stat-lbl">Correct</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" id="statWrong">0</span>
+              <span class="stat-lbl">Wrong</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val" id="statSkipped">0</span>
+              <span class="stat-lbl">Skipped</span>
+            </div>
+          </div>
+          <button class="restart-btn" id="restartBtn">[ RETRY → ]</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
